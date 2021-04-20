@@ -1,0 +1,542 @@
+.body{
+    position: relative;
+    margin-bottom: 100px;
+}
+.topnav { /* got rid of overflow:hidden if you want the dropdown menu to be visible*/
+    display: block;
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    background-color: #f79933;
+    border-radius: 10px;
+    width:100%;
+}
+.header{
+    margin-bottom: 150px; /* a somewhat weird attribute but it has to stay here due to the topnav being position:fixed*/
+    font-size: 130%;
+    font-family: 'Courier New', monospace;
+}
+.website_logo {
+    float: left;
+    overflow: hidden;
+    padding: 25px;
+}
+.website_logo img{
+    width: 150px;
+    border-radius: 10px;
+}
+/* note for future: styling top navigation bar without using lists is not recommended
+.topnav a {
+    display: inline-block;
+    background-color:#0094cb;
+	color:#F7F7F7;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 40px;
+    text-decoration: none;
+    border-radius: 15px;
+  
+}*/
+.topnav ul{
+    float: left;
+    list-style: none;
+    margin-right: 20px;
+    position:relative;
+}
+.topnav ul li{
+    display: inline-block;
+    margin-right: 5px;
+}
+.topnav ul li a{
+    border-radius: 15px;
+    background-color:#0094cb;
+    color:#F7F7F7;
+    text-decoration: none;
+    line-height: 70px;
+    padding: 30px;
+    text-transform: uppercase;
+    text-align: center;
+}
+.topnav ul ul{
+    position: absolute;
+    top:70px;
+    opacity: 0; /* hides the dropdown menu*/
+    visibility: hidden;
+}
+.topnav ul li:hover > ul{
+    top: 70px;
+    opacity: 1; /* shows the dropdown menu if the user hovers*/
+    visibility: visible;
+}
+.topnav ul ul li{
+    
+    position: relative;
+    margin: 0px;
+    width: 150px;
+    float: none;
+    display: list-item;
+}
+.ul2{
+    display: none; /* hide the menu dropdown menu initially */
+}
+
+.topnav a:hover {
+	background-color:#F7F7F7;
+	color:#f79933;
+}
+.main-content{
+    float: left;
+    padding: 25px;
+    border-radius: 10px;
+    font-family: 'Courier New', monospace;
+}
+.main-content h1{
+    color:#0094cb
+}
+.textbox {
+    width: 65%;
+    float: left;
+    background-color: #F7F7F7;
+    padding: 25px;
+    border-radius: 10px;
+}
+.textbox h1{
+    font-size: 50px;
+}
+.textbox p{
+    font-size: 30px;
+}
+.textbox video{
+    float: left;
+}
+.main-aside{ /* aside for the index.html page */
+    width:25%;
+    float: right;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #0094cb;
+    font-family: 'Courier New', monospace;
+}
+
+.contact{
+    border-radius: 10px;
+    margin: 10px;
+}
+.contact h3{
+    color:white ;
+    text-align: center;
+    font-size: 40px;
+}
+.contact ul{
+    font-size: 25px;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+td, th {
+    border: 1px solid#f79933 ;
+    text-align: left;
+    padding: 10px;
+}
+  
+.bot-nav a{ /* footer navigation bar */
+    font-family: 'Courier New', monospace;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    color:#F7F7F7;
+    border-radius: 10px;
+    padding: 5px;
+    background-color:#0094cb;
+    margin: 1px;
+}
+.bot-nav a:hover {
+	background-color:white;
+	color:#f79933;
+}
+.bestsellers{
+    font-family: 'Courier New', monospace;
+    width: 100%;
+    clear: both;
+    background-color:#F7F7F7;
+    border-radius: 10px;
+}
+.bestsellers h1{
+    text-align: center;
+    color:#0094cb
+}
+.bestsellers img{
+    padding-left: 5%;
+    padding-right: 5%;
+    width: 12%;
+    border-radius: 10px;
+}
+.footer1 {
+    width: 100%;
+    background-color:#f79933;
+    color: #0094cb;
+    text-align: center;
+    clear:both
+}
+.social{
+    padding-top:10px;
+}
+.social_logo img{
+        width: 50px;
+        border-radius: 10px;
+}
+.aside-products{
+    min-width: 500px;
+    width:45%;
+    float: left;
+    padding: 10px;
+    margin-left: 10px;
+    border-radius: 10px;
+    background-color: #0094cb;
+    font-family: 'Courier New', monospace;
+}
+.textbox-products{
+    width: 50%;
+    float: left;
+    background-color: #F7F7F7;
+    padding: 25px;
+    border-radius: 10px;
+}
+.gameshowcase{
+    width: 95%;
+    float: left;
+    background-color: #F7F7F7;
+    padding: 25px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    border-radius: 10px;
+}
+.product {
+    min-width: 500px;
+    max-height: 250px;
+    font-family: 'Courier New', monospace;
+    float: left;
+    width: 30%;
+    margin: 10px;
+    border-width:2px;
+    border-style:solid;
+    border-radius: 10px;
+    border-color:#0094cb;
+}
+.product img{
+    float: left;
+    padding-right: 5%;
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+}
+.instock{ /* for buttons which products can be purchased */
+    border: none;
+    outline: 0;
+    padding: 10px;
+    color: black;
+    background-color:#0094cb;
+    cursor: pointer;
+    font-size: 20px;
+}
+.outofstock{  /* for buttons which products cannot be purchased */
+    border: none;
+    outline: 0;
+    padding: 10px;
+    color: black;
+    background-color:red;
+    cursor: pointer;
+    font-size: 20px;
+}
+.product a{
+    color: #0094cb;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.price {
+    font-size: 20px;
+}
+.product button:hover {
+    opacity: 0.7;
+}
+.basket{
+    font-family: 'Courier New', monospace;
+    clear: both;
+    width:100%;
+    background-color:#F7F7F7;
+    border-radius: 10px;
+}
+.basket h2{
+    text-align: center;
+
+}
+.basket-row {  /* having a space in the class name creates two classes */
+    display: flex;
+}
+
+.basket-column {
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid black;
+    margin-right: 10px;
+    padding-bottom: 10px;
+    margin-top: 10px;
+}
+.basket-item {
+    width: 45%;
+}
+.basket-price {
+    width: 15%;
+}
+.basket-quantity {
+    width: 35%;
+}
+.basket-item-image {
+    padding-left: 10px;
+    width: 40%;
+}
+.basket-total {
+    
+    padding: 10px;
+    margin-top: 10px;
+}
+.basket-total p{
+    display: inline;
+}
+.remove-button{
+    margin: 5px;
+    border: none;
+    outline: 0;
+    padding: 10px;
+    color: black;
+    background-color:#0094cb;
+    cursor: pointer;
+    font-size: 20px;
+    opacity: 0.7;
+}
+.remove-button:hover{
+    opacity: 1;
+}
+.purchase-button{
+    margin: 5px;
+    border: none;
+    outline: 0;
+    padding: 15px;
+    color: black;
+    background-color:#0094cb;
+    cursor: pointer;
+    font-size: 40px;
+    opacity: 0.7;
+}
+.purchase-button:hover{
+    opacity: 1;
+}
+.basket-quantity-input {
+    height: 30px;
+    width: 15%;
+    border: 1px solid #0094cb;
+    text-align: center;
+}
+.formcontainer{
+    padding: 25px; 
+}
+input[type=text], input[type=password] {  /* can style things without class names */
+    width: 97%;
+    padding: 15px;
+    border: none;
+    background: lightgrey;
+}
+hr {
+    border: 1px solid lightgrey;
+    margin-bottom: 20px;
+}
+input[type=submit] {
+    background-color: #0094cb;
+    color: white;
+    font-size: 30px;
+    padding: 20px; 
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.8;
+}
+input[type=submit]:hover {
+    opacity: 1;
+}
+.script{  /* controlling header color and font size */
+    background-color: grey;
+    margin-left: 5px;
+    padding: 10px;
+    border-radius: 10px;
+    float: right;
+}
+.script ul{
+    padding-left: 5px;
+}
+.script li {
+    cursor: pointer;
+    list-style-type: none;
+    float: right;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px;
+}
+.dark span{
+    display: inline-block;
+    background-color: black;
+    width: 20px;
+}
+.light span{
+    display: inline-block;
+    background-color:white;
+    width: 20px;
+}
+.dark a{
+    color:black;
+}
+.light a{
+    color:white;
+}
+#darker{
+    background-color: grey;
+    transition: 1s ease;
+}
+#ligher{
+    background-color:white;
+    transition: 1s ease;
+}
+.fontbig{
+    background-color: white;
+}
+.fontsmall{
+    background-color:white;
+}
+.fontreset{
+    background-color: white;
+}
+#medium{
+    font-size: 130%;
+    transition: 1s ease;
+}
+#big{
+    font-size: 170%;
+    transition: 1s ease;
+}
+#small{
+    font-size: smaller;
+    transition: 1s ease;
+}
+.deals{
+    background-color:#F7F7F7;
+    font-family: 'Courier New', monospace;
+
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+.deals h1{
+    color:#0094cb;
+    text-align: center;
+}
+.dealsCtrl{
+    text-align: center;
+}
+.dealsCtrl button{
+    margin: 2px;
+    border: none;
+    outline: 0;
+    color: black;
+    background-color:#0094cb;
+    cursor: pointer;
+    font-size: 20px;
+    opacity: 0.7;
+}
+.dealsCtrl button:hover{
+    opacity: 1;
+}
+.previous , .next{
+    display: none; /* initially hide the buttons */
+}
+.showcase{
+    text-align: center;
+}
+.right {
+    color:  #0094cb;
+    cursor: pointer;
+    position: absolute;
+    font-size: 150px;
+}
+.left {
+    color:  #0094cb;
+    cursor: pointer;
+    position:absolute;
+    font-size: 150px;
+}
+.specification{
+    float: left;
+    font-family: 'Courier New', monospace;
+    background-color:#F7F7F7 ;
+}
+.spec-element{
+    float: left;
+}
+.specification img{
+    width: 250px;
+    float: left;
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+.specification a{
+    float:right;
+    color: #0094cb;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+@media screen and (max-width: 1400px) {  /* media queries */
+    .main-aside {
+        width: 100%; 
+    }
+    .textbox{
+        width: 95%;
+        margin-bottom: 10px;
+    }
+}
+@media screen and (max-width: 1595px) {
+    .product{
+        clear: both;
+        float: left;
+    }
+    .textbox-products{
+        width: 100%;
+    }
+    .aside-products{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 1545px) {
+    .topnav h1{
+        display: none;  
+    }
+}
+@media screen and (max-width: 1300px) {
+    .ul2{
+        display: block; 
+    }
+    .ul1{
+        display: none; /* if screen gets small hide the initial menu navigation */
+    }
+}
+@media screen and (max-width: 1545px) {
+    .topnav h1{
+        display: block;
+    }
+}
+@media screen and (max-width: 780px) {
+    .previous, .next{
+        display: inline-block; /* show buttons if veiwport is small */
+    }
+    .left , .right{
+        display: none; /* hide arrows if veiwport is small */
+    }
+}
